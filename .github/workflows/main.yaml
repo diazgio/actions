@@ -11,3 +11,5 @@ jobs:
 
       - name: Run local action
         uses: ./.github/actions/my-actions
+        with:
+          message: "Giordano"
