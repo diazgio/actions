@@ -11,4 +11,4 @@ jobs:
 
     steps:
       - name: Test
-        run: echo "Valor: ${{ env.MY_VAR }}"
+        run: ls
