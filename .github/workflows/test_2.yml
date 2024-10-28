@@ -1,4 +1,4 @@
-name: Ejemplo de composite action
+name: Variables de entorno
 
 on: [push]
 
@@ -6,18 +6,9 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
 
-    services:
-      mysql:
-        image: mysql:5.7
-        env:
-          MYSQL_ROOT_PASSWORD: password
-        ports:
-          - 3306:3306
+    env:
+      MY_VAR: Mi variable de entorno
 
-      redis:
-        image: redis
-        ports:
-          - 6379:6379
     steps:
       - name: Test
-        run: ls
+        run: echi "Valor: $MY_VAR"
