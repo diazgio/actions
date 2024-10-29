@@ -12,3 +12,6 @@ jobs:
     steps:
       - name: Test
         run: echo "variable de entorno ${{ vars.MY_VARIABLE_2 }}"
+
+      - name: Secret
+        run: echo "variable de entorno ${{ secrets.MY_SECRET }}"
