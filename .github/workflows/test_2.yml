@@ -11,4 +11,4 @@ jobs:
 
     steps:
       - name: Test
-        run: echo "variable de entorno $MY_VAR"
+        run: echo "variable de entorno ${{ vars.MY_VARIABLE_2 }}"
